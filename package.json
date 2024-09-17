@@ -1,0 +1,46 @@
+{
+  "name": "create-library",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akadotsh/library-starter-cli.git"
+  },
+  "bin": {
+    "create-library": "./dist/bin/index.mjs"
+  },
+  "exports": "./dist/bin/index.js",
+  "main": "./dist/bin/index.js",
+  "type": "module",
+  "keywords": [
+    "create-library",
+    "bundler",
+    "library",
+    "typescript",
+    "javascript"
+  ],
+  "scripts": {
+    "dev": "jiti ./bin/index.ts",
+    "build": "tsup ./bin/index.ts",
+    "start": "node ./dist/bin/index.js"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "fs-extra": "^11.2.0",
+    "jiti": "^1.21.6",
+    "picocolors": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org/"
+  }
+}
